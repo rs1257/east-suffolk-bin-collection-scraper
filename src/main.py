@@ -1,7 +1,7 @@
 import argparse
 import logging
-from service.scraper import Scraper
-from util.const import URL, WAIT, DEBUG
+from src.service.scraper import Scraper
+from src.util.const import WAIT
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

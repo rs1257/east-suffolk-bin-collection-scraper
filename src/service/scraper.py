@@ -1,10 +1,10 @@
 import time
 from playwright.sync_api import sync_playwright
 
-from model.bin_day import BinDay
-from model.bin_collections import BinCollections
-from util.const import URL
-from util.wrap import wrap, entering, exiting
+from src.model.bin_day import BinDay
+from src.model.bin_collections import BinCollections
+from src.util.const import URL
+from src.util.wrap import wrap, entering, exiting
 
 iframe_selector = "#fillform-frame-1"
 

@@ -9,3 +9,17 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
+-   repo: local
+    hooks:
+      - id: unittests
+        name: run unit tests
+        entry: python -m coverage run -m unittest discover src/tests
+        language: system
+        pass_filenames: false
+-   repo: local
+    hooks:
+      - id: coverage
+        name: run coverage
+        entry: python -m coverage html
+        language: system
+        pass_filenames: false

@@ -1,4 +1,4 @@
-from model.bin_day import BinDay
+from src.model.bin_day import BinDay
 
 
 class BinCollections:

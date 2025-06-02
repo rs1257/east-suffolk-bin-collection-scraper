@@ -13,6 +13,4 @@ Install playwright browsers with `playwright install chromium`
 
 TODO
 ----
-Add linting
-Add tests
-Add coverage
+Write tests
