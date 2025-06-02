@@ -1,7 +1,7 @@
 from model.bin_day import BinDay
 
-class BinCollections:
 
+class BinCollections:
     def __init__(self):
         self.bin_collections = {}
 

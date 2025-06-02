@@ -8,6 +8,7 @@ from util.wrap import wrap, entering, exiting
 
 iframe_selector = "#fillform-frame-1"
 
+
 @wrap(entering, exiting)
 class Scraper:
     @wrap(entering, exiting)
@@ -42,12 +43,22 @@ class Scraper:
 
     @wrap(entering, exiting)
     def select_option_with_text(self, page, selector, text):
-        option = self.get_frame_locator(page, selector).get_by_role("option", name=text).text_content()
-        self.get_frame_locator(page, selector).get_by_role("combobox").select_option(option)
+        option = (
+            self.get_frame_locator(page, selector)
+            .get_by_role("option", name=text)
+            .text_content()
+        )
+        self.get_frame_locator(page, selector).get_by_role("combobox").select_option(
+            option
+        )
 
     @wrap(entering, exiting)
     def get_all_bin_collections(self, page):
-        return self.get_frame_locator(page, iframe_selector).locator("div.fieldContent > span > div > center > b").all_inner_texts()
+        return (
+            self.get_frame_locator(page, iframe_selector)
+            .locator("div.fieldContent > span > div > center > b")
+            .all_inner_texts()
+        )
 
     @wrap(entering, exiting)
     def extract_bin_collections(self, matches):
