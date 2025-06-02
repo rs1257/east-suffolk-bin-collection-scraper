@@ -35,4 +35,4 @@ jobs:
         python -m coverage run -m unittest discover src/tests
     - name: Coverage
       run: |
-        python -m coverage
+        python -m coverage report
